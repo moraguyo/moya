@@ -1,0 +1,167 @@
+@{
+    // CMS 기본 경로 설정
+    string layoutPath = "/UserData/mhetest/Layouts/mhetest_Layout";
+    string cssFile = layoutPath + "/Contents/Main_test_04.css";
+    string jsFile = layoutPath + "/Scripts/Main_test_04_script.js";
+}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+KR:wght@300;400;700&family=Inter:wght@300;400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<link href="@Url.Content("~" + cssFile)" rel="stylesheet" />
+
+<div class="cms-content-root">
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-logo">Centennial</div>
+        <div class="nav-links">
+            <a href="#">Heritage</a>
+            <a href="#">Archive</a>
+            <a href="#">Mission</a>
+            <a href="#">Future</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1759417831863-e6d776fa85c3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwc3RvbmUlMjBjYXRoZWRyYWwlMjBhcmNoaXRlY3R1cmV8ZW58MXx8fHwxNzcwMTI1MzE4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Historical cathedral">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-subtitle">Timeline Archive</h2>
+            <h1 class="hero-title">Moments of<br>100 Years</h1>
+            <div style="margin-top: 3rem;">
+                <span class="material-icons" style="color: rgba(255,255,255,0.5); font-size: 2.5rem;">expand_more</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <div class="intro-content">
+            <p class="intro-tag">Our Foundation</p>
+            <h3 class="intro-title">시간의 흐름 속에 새겨진, 100년의 믿음.</h3>
+            <p class="intro-desc">
+                침묵 끝에 모인 작은 불씨로부터 현재를 비추는 활기찬 공동체에 이르기까지,<br>
+                우리의 영적 여정을 정의하는 역사적 이정표를 살펴보세요.
+            </p>
+        </div>
+    </section>
+
+    <!-- Timeline Container -->
+    <div id="timeline-scroll-container" class="timeline-scroll-container">
+        <div class="sticky-viewport">
+            <!-- Background Layers -->
+            <div id="bg-layer-current" class="bg-layer">
+                <img id="current-bg-img" src="" alt="">
+                <div class="bg-overlay"></div>
+            </div>
+            <div id="bg-layer-next" class="bg-layer" style="opacity: 0;">
+                <img id="next-bg-img" src="" alt="">
+                <div class="bg-overlay"></div>
+            </div>
+
+            <!-- Content Container -->
+            <div id="content-container" class="content-container">
+                <!-- Injected by JS -->
+            </div>
+
+            <!-- Dark Overlay for transition -->
+            <div id="dark-overlay" class="dark-overlay"></div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <section id="video-section" class="video-section">
+        <div class="video-container">
+            <div class="video-header">
+                <p class="video-tag">100주년 기념 영상 시리즈</p>
+                <h3 class="video-main-title">세기의 목소리</h3>
+            </div>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com/photo-1762777125835-fb9833fb931e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Episode 01">
+                        <div class="play-btn">
+                            <span class="material-icons">play_arrow</span>
+                        </div>
+                    </div>
+                    <p class="video-ep">Episode 01.</p>
+                    <h5 class="video-card-title">첫 번째 비전가</h5>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com/photo-1768321611052-970d36fd6571?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Episode 02">
+                        <div class="play-btn">
+                            <span class="material-icons">play_arrow</span>
+                        </div>
+                    </div>
+                    <p class="video-ep">Episode 02.</p>
+                    <h5 class="video-card-title">위대한 모임</h5>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com/photo-1769454682444-3bb07828f73e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Episode 03">
+                        <div class="play-btn">
+                            <span class="material-icons">play_arrow</span>
+                        </div>
+                    </div>
+                    <p class="video-ep">Episode 03.</p>
+                    <h5 class="video-card-title">섬김의 손길</h5>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumb">
+                        <img src="https://images.unsplash.com/photo-1694878276633-dc6bcba7ee33?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" alt="Episode 04">
+                        <div class="play-btn">
+                            <span class="material-icons">play_arrow</span>
+                        </div>
+                    </div>
+                    <p class="video-ep">Episode 04.</p>
+                    <h5 class="video-card-title">다음 100년</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div>
+                <h2 class="footer-logo">Centennial</h2>
+                <p class="footer-desc">
+                    100년의 믿음과 소망, 그리고 사랑을 기념합니다. 1924년에 설립되어, 우리는 함께 다음 세기를 향해 나아갑니다.
+                </p>
+            </div>
+            <div>
+                <h6 class="footer-heading">Archive</h6>
+                <ul class="footer-links">
+                    <li><a href="#">역사 자료</a></li>
+                    <li><a href="#">사진 갤러리</a></li>
+                    <li><a href="#">구술 기록</a></li>
+                    <li><a href="#">연혁</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="footer-heading">Connect</h6>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><span class="material-icons">public</span></a>
+                    <a href="#" class="social-icon"><span class="material-icons">email</span></a>
+                </div>
+                <p>© 2024 Centennial Church Heritage Society.<br>All rights reserved.</p>
+            </div>
+        </div>
+        <div class="footer-container">
+            <div class="footer-bottom" style="grid-column: 1 / -1;">
+                <div class="footer-legal">
+                    <a href="#">개인정보 처리방침</a>
+                    <a href="#">이용약관</a>
+                    <a href="#">쿠키 설정</a>
+                </div>
+                <p>Designed with faith and precision.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="@Url.Content("~" + jsFile)"></script>
